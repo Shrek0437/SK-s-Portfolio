@@ -5,3 +5,7 @@ var typed = new typed(".text" ,{
     backDelay:1000,
     loop:true,
 });
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
