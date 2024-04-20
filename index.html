@@ -23,10 +23,16 @@
                 <a href ="#skills" style="--i:4">Portfolio</a>
                 <a href ="#contact" style="--i:5">Contact</a>
                 <button onclick="myFunction()"><i class='bx bx-moon' style='color:#00eeff' ></i></button>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <!-- Add more language options as needed -->
+                  </select>
             </nav>
         </header>
         <section class="home">
-            <div class="home-content">
+            <div class="container">
+                
                 <h3>Hello, I'm</h3>
                 <div class="waviy">
                     <span style="--i:1">S</span>
@@ -45,7 +51,9 @@
                     <span style="--i:13">a</span>
                     
                  
-                   </div>
+                    
+        
+
                 <h3>And I am a<span class="text"></span></h3>
                 <p style="font-size: 25px;">1st Year Undergraduate Student</p>
                 <div class="home-sci">
@@ -66,11 +74,15 @@
             <div class="about-text">
                 <h2>About<span>Me</span></h2>
                 <h4>Student</h4>
-                <p style="font-size: 25px;">I am a first year Undergraduate at Amrita Vishwa Vidyapeetham in Computer Science Engineering. I am 19.
-                    Unlike other portfolios, I do not have any titles, YET ! I everyday learn a new aspect of CSE like this
-                    portfolio that I have made from scratch. Apart from being an active learner, I also indulge in various 
-                    co-curricular activites like MUNing, Hackathons etc.
+                
+                <p style="font-size: 25px;" id="heading">I am a first year Undergraduate at Amrita Vishwa Vidyapeetham in Computer Science Engineering. I am 19.
+                    Unlike other portfolios, I do not have any titles,<button id="toggle-btn" onclick="toggleInfo()" >Show More</button> <br>
                 </p>
+                <div id="additional-info" style="display: none;">
+                    <p>YET ! I everyday learn a new aspect of CSE like this
+                    portfolio that I have made from scratch. Apart from being an active learner, I also indulge in various 
+                    co-curricular activites like MUNing, Hackathons etc.</p>
+                </div>
                 <a href="Dance Drama_Angre(2019-20).mp4" class="btn-box">More About Me</a>
             </div>
         </section>
@@ -258,13 +270,20 @@ Upon detection of a faulty street light, the system generates automated alerts, 
             <div class="contact-form">
                 <form action="">
                     <input type=" " placeholder="Enter Your Name" required><br>
-                    <input type="email" placeholder="Enter Your Email" required><br>
+                    <input type="email" placeholder="Enter Your Email" id="email" required><br>
                     <input type="" placeholder="Enter Your Subject"><br>
                     <textarea name="" id="" placeholder="Enter Your Message" required></textarea><br>
                 <input type="submit" value="Submit" class="send">
                 </form>
             </div>
         </section>
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+              <div class="chat-messages" id="chat-messages"></div>
+              <input type="text" id="chat-input" placeholder="Type a message...">
+              <button id="send-btn">Send</button>
+            </div>
+        </div>
         <div class="snowflakes" aria-hidden="true">
             
             <div class="snowflake">
